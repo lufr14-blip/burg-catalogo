@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "burg",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": [
+        "-NoProfile",
+        "-ExecutionPolicy", "Bypass",
+        "-File", "C:\\Users\\D1017LM\\Downloads\\Fotos\\_build\\serve.ps1",
+        "-Port", "8123"
+      ],
+      "port": 8123
+    }
+  ]
+}

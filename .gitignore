@@ -1,0 +1,14 @@
+# Arquivos pesados / fonte — NÃO publicar (o site final está em site/)
+/*.JPG
+/*.jpg
+/*.jpeg
+/Fotos.zip
+/*.pptx
+/*.pdf
+/_build/
+
+# Sistema
+Thumbs.db
+ehthumbs.db
+.DS_Store
+desktop.ini
