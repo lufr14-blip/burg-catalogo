@@ -327,3 +327,20 @@ body::before{
 @media (min-width:561px) and (max-width:860px){
   .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
+/* Telas de pouca ALTURA (notebooks): encolhe logo e título do hero p/ não colidirem.
+   Vêm depois das media de largura para ter precedência quando ambas se aplicam. */
+@media (max-height:820px){
+  .brand__logo{height:94px}
+  .hdr.is-scrolled .brand__logo{height:50px}
+}
+@media (max-height:710px){
+  .brand__logo{height:74px}
+  .hdr.is-scrolled .brand__logo{height:46px}
+  .hero__title{font-size:clamp(2.1rem,5.4vw,3.5rem)}
+  .hero__inner{padding-bottom:clamp(30px,4.5vh,54px)}
+}
+@media (max-height:560px){
+  .hero{min-height:auto;padding-top:96px}
+  .brand__logo{height:58px}
+  .hero__title{font-size:clamp(1.8rem,5vw,2.6rem)}
+}
