@@ -311,7 +311,29 @@
     so.observe(statsSec);
   } else animateCounters();
 
+  /* ---------- Dados estruturados de produtos (SEO) ---------- */
+  function injectProductSchema() {
+    const items = PRODUCTS.map((p, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "Product",
+        "name": p.name,
+        "image": new URL(coverLarge(p), document.baseURI).href,
+        "description": p.desc,
+        "category": p.cat + " › " + p.cut,
+        "brand": { "@type": "Brand", "name": p.brand }
+      }
+    }));
+    const data = { "@context": "https://schema.org", "@type": "ItemList", "name": "Catálogo de cortes Burg", "numberOfItems": PRODUCTS.length, "itemListElement": items };
+    const s = document.createElement("script");
+    s.type = "application/ld+json";
+    s.textContent = JSON.stringify(data);
+    document.head.appendChild(s);
+  }
+
   /* ---------- Init ---------- */
   renderGrid();
   observeReveals();
+  injectProductSchema();
 })();
