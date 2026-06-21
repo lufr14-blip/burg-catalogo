@@ -76,8 +76,9 @@
     <img class="brand__logo" src="assets/img/brand/burg.png" alt="Burg" />
   </a>
   <nav class="nav" aria-label="Navegação principal">
-    <a href="#diferenciais">Diferenciais</a>
+    <a href="#paraquem">Para quem</a>
     <a href="#catalogo">Catálogo</a>
+    <a href="#calculadora">Calculadora</a>
     <a href="#empresa">A Empresa</a>
     <a href="#contato">Contato</a>
   </nav>
@@ -99,9 +100,9 @@
     <div class="hero__bg" id="hero-bg"></div>
     <div class="hero__scrim"></div>
     <div class="hero__inner">
-      <p class="hero__eyebrow">Cortes nobres · Padrão profissional</p>
-      <h1 class="hero__title">O corte certo<br>no seu prato,<br><em>sempre.</em></h1>
-      <p class="hero__lead">Cortes bovinos, aves e suínos porcionados, padronizados e prontos para a cozinha do seu restaurante. Maciez garantida, zero perdas e rentabilidade previsível.</p>
+      <p class="hero__eyebrow">Carne porcionada para food service · by Delly's</p>
+      <h1 class="hero__title">A carne que já<br>chega <em>resolvida.</em></h1>
+      <p class="hero__lead">Cortes bovinos, aves e suínos porcionados na sua gramatura — zero osso, zero aparas, CMV previsível e padrão idêntico em toda entrega. Produção nacional, entrega em 24h a partir de 18 CDs.</p>
       <div class="hero__cta">
         <a href="#catalogo" class="btn btn--solid">Ver o catálogo</a>
         <button class="btn btn--line" id="btn-present-2" type="button">
@@ -111,6 +112,16 @@
       </div>
     </div>
     <a href="#numeros" class="hero__scroll" aria-label="Rolar para baixo"><span></span></a>
+  </section>
+
+  <!-- ░░ FAIXA DE CONFIANÇA ░░ -->
+  <section class="trustbar" aria-label="Reconhecimento e credenciais">
+    <ul class="trustbar__items">
+      <li class="trustbar__item"><span class="trustbar__badge">★ Parceiro do Ano</span><span class="trustbar__txt">Reconhecida no food service</span></li>
+      <li class="trustbar__item"><span class="trustbar__badge">24h</span><span class="trustbar__txt">Entrega no território atendido</span></li>
+      <li class="trustbar__item"><span class="trustbar__badge">+190 mil</span><span class="trustbar__txt">Operações abastecidas</span></li>
+      <li class="trustbar__item"><span class="trustbar__badge">by Delly's</span><span class="trustbar__txt">Burg, Tuchê e Brit — uma só logística</span></li>
+    </ul>
   </section>
 
   <!-- ░░ NÚMEROS / CREDIBILIDADE ░░ -->
@@ -133,18 +144,22 @@
   <section class="diff" id="diferenciais">
     <div class="section-head">
       <p class="kicker">Por que Burg</p>
-      <h2 class="section-title">Mais que carne. <em>Solução de cozinha.</em></h2>
-      <p class="section-sub">Cada corte é pensado para resolver a operação do restaurante — da maciez na boca ao custo no fim do mês.</p>
+      <h2 class="section-title">Não vendemos carne. <em>Vendemos operação resolvida.</em></h2>
+      <p class="section-sub">Cinco diferenciais que aparecem no prato e fecham na planilha. Cada um vira número antes de virar promessa.</p>
     </div>
     <div class="diff__grid" id="diff-grid"><!-- JS --></div>
+    <div class="midcta reveal">
+      <p>Quer ver esses diferenciais virarem número na sua planilha?</p>
+      <a class="btn btn--line" href="#calculadora">Calcular meu rendimento →</a>
+    </div>
   </section>
 
   <!-- ░░ CATÁLOGO ░░ -->
   <section class="cat" id="catalogo">
     <div class="section-head">
       <p class="kicker">Portfólio</p>
-      <h2 class="section-title">O catálogo</h2>
-      <p class="section-sub">Bovinos, aves, suínos e hambúrguer. Toque em um produto para ver as fotos e os detalhes.</p>
+      <h2 class="section-title">O catálogo que <em>já chega resolvido.</em></h2>
+      <p class="section-sub">Cortes bovinos, aves, suínos e hambúrguer — porcionados, padronizados e prontos para a praça. Cada item abre com a foto real do corte: é exatamente o que chega no seu CD. Você paga carne — não paga osso, nem aparas.</p>
     </div>
 
     <div class="cat__toolbar">
@@ -158,6 +173,68 @@
     <div class="cat__count" id="cat-count" aria-live="polite"></div>
     <div class="grid" id="grid"><!-- JS --></div>
     <p class="cat__empty" id="cat-empty" hidden>Nenhum produto encontrado para essa busca.</p>
+    <div class="midcta reveal">
+      <p>Não achou o corte ou a gramatura que a sua casa precisa?</p>
+      <a class="btn btn--line" href="https://wa.me/5511952340007?text=Ol%C3%A1!%20Quero%20um%20corte%20sob%20medida%20(gramatura%2C%20corte%20e%20tempero)." target="_blank" rel="noopener">Pedir corte sob medida →</a>
+    </div>
+  </section>
+
+  <!-- ░░ CALCULADORA ░░ -->
+  <section class="calc" id="calculadora" aria-label="Calculadora de rendimento">
+    <div class="section-head">
+      <p class="kicker">CMV na ponta do lápis</p>
+      <h2 class="section-title">Você paga carne. <em>Não paga osso, nem aparas.</em></h2>
+      <p class="section-sub">Veja quanto custa, de verdade, o quilo aproveitável quando você limpa a peça na sua cozinha — e compare com o porcionado Burg.</p>
+    </div>
+    <div class="calc__wrap reveal">
+      <div class="calc__inputs">
+        <label>Preço da peça bruta (R$/kg)<input type="number" id="calc-bruto" value="42" min="0" step="0.5" inputmode="decimal"></label>
+        <label>Perda na limpeza e aparas<span class="calc__rangewrap"><input type="range" id="calc-perda" value="20" min="0" max="35" step="1"><span class="calc__rangeval" id="calc-perda-val">20%</span></span></label>
+        <label>Preço do porcionado Burg (R$/kg)<input type="number" id="calc-porc" value="49" min="0" step="0.5" inputmode="decimal"></label>
+        <label>Volume aproveitável por mês (kg)<input type="number" id="calc-vol" value="300" min="0" step="10" inputmode="numeric"></label>
+      </div>
+      <div class="calc__out" aria-live="polite">
+        <div class="calc__row"><span>Custo real da peça <em>(por kg aproveitável)</em></span><strong id="calc-real">R$ 52,50</strong></div>
+        <div class="calc__row"><span>Custo do porcionado Burg</span><strong id="calc-porcout">R$ 49,00</strong></div>
+        <div class="calc__row calc__row--hi"><span>Economia por kg</span><strong id="calc-kg">R$ 3,50</strong></div>
+        <div class="calc__row calc__row--big"><span>Economia estimada por mês</span><strong id="calc-mes">R$ 1.050</strong></div>
+        <p class="calc__note" id="calc-msg">No porcionado você não paga aparas — e ainda elimina a mão de obra da limpeza.</p>
+        <a class="btn btn--solid" id="calc-cta" href="#" target="_blank" rel="noopener">Quero esse cálculo na minha operação</a>
+        <p class="calc__fine">Estimativa baseada nos seus números. O resultado real depende do corte e da sua operação.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ PARA QUEM ░░ -->
+  <section class="audience" id="paraquem" aria-label="Para qual operação">
+    <div class="section-head">
+      <p class="kicker">Qual operação é a sua?</p>
+      <h2 class="section-title">Três linhas. <em>Uma para cada cozinha.</em></h2>
+      <p class="section-sub">Você não precisa de mais um fornecedor de carne. Precisa do corte certo para o jeito que a sua casa gira. Burg para impressionar, Tuchê para girar, Brit para contar história — todas <em>by Delly's</em>.</p>
+    </div>
+    <ul class="audience__grid">
+      <li class="aud reveal">
+        <p class="aud__brand">BURG · Premium porcionado</p>
+        <p class="aud__for">Para churrascarias, steakhouses e casas de carne onde o corte é a estrela e o cliente fotografa antes de comer.</p>
+        <p class="aud__arg">Quando o corte é o personagem do cardápio, ele tem que sair igual à foto — na mesa 4 e na mesa 40, na terça vazia e no sábado lotado. Burg entrega gramatura cravada e maciez do primeiro ao último corte, para você precificar alto sem medo de reclamação.</p>
+        <p class="aud__ex">Picanha em bifes 170g/220g · Bife ancho 220g · Mignon steak 120g · Picanha em peça.</p>
+        <a class="aud__cta" href="#catalogo" data-filter="Bovinos">Ver cortes Burg →</a>
+      </li>
+      <li class="aud reveal">
+        <p class="aud__brand">TUCHÊ · Dia a dia que gira</p>
+        <p class="aud__for">Para self-service, executivos, redes e cozinhas de alto volume que precisam de saída rápida sem perder o padrão.</p>
+        <p class="aud__arg">No volume, o inimigo não é o preço do quilo — é a variação. Carne que rende diferente a cada caixa estoura o CMV. Tuchê é feito para girar: porção padronizada, rendimento previsível e preparo rápido, mesmo com a equipe que você consegue contratar hoje.</p>
+        <p class="aud__ex">Picanha fatiada Tuchê — o equilíbrio entre padrão e custo para a casa que não pode parar a linha.</p>
+        <a class="aud__cta" href="#catalogo" data-filter="Bovinos">Ver cortes Tuchê →</a>
+      </li>
+      <li class="aud reveal">
+        <p class="aud__brand">BRIT · Raça britânica</p>
+        <p class="aud__for">Para cozinhas autorais, menus de degustação e chefs que vendem origem e narrativa junto com o corte.</p>
+        <p class="aud__arg">Tem cliente que paga pela história — desde que ela seja verdadeira e o prato sustente o discurso. Brit é raça britânica para a casa que coloca procedência no cardápio e precisa que a maciez confirme a promessa do garçom.</p>
+        <p class="aud__ex">Linha de raça britânica para carta e degustação — disponibilidade sob consulta com o time comercial.</p>
+        <a class="aud__cta" href="https://wa.me/5511952340007?text=Ol%C3%A1!%20Quero%20conhecer%20os%20cortes%20da%20linha%20Brit%20(ra%C3%A7a%20brit%C3%A2nica)." target="_blank" rel="noopener">Falar sobre a linha Brit →</a>
+      </li>
+    </ul>
   </section>
 
   <!-- ░░ EMPRESA ░░ -->
@@ -180,11 +257,11 @@
 
   <!-- ░░ CONTATO ░░ -->
   <section class="cta" id="contato">
-    <h2 class="cta__title">Vamos montar o cardápio<br>do seu restaurante?</h2>
-    <p class="cta__sub">Fale com nosso time comercial e receba uma proposta de cortes sob medida para a sua operação.</p>
-    <a class="btn btn--solid btn--lg" href="https://wa.me/5511952340007?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20cortes%20Burg." id="cta-whats" target="_blank" rel="noopener">
+    <h2 class="cta__title">Quer o CMV fechado<br>antes de abrir a casa?</h2>
+    <p class="cta__sub">Diga seu corte, sua gramatura e seu volume. Devolvemos uma proposta com ficha técnica e preço por porção — sem custo de osso e sem aparas.</p>
+    <a class="btn btn--solid btn--lg" href="https://wa.me/5511952340007?text=Ol%C3%A1!%20Quero%20uma%20proposta%20com%20ficha%20t%C3%A9cnica%20e%20pre%C3%A7o%20por%20por%C3%A7%C3%A3o%20dos%20cortes%20Burg." id="cta-whats" target="_blank" rel="noopener">
       <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.9 4.5 4 .6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg>
-      Falar no WhatsApp
+      Pedir proposta no WhatsApp
     </a>
   </section>
 
@@ -198,12 +275,18 @@
 
 <!-- ░░ MOBILE MENU ░░ -->
 <div class="mobnav" id="mobnav" hidden>
-  <a href="#diferenciais">Diferenciais</a>
+  <a href="#paraquem">Para quem</a>
   <a href="#catalogo">Catálogo</a>
+  <a href="#calculadora">Calculadora</a>
   <a href="#empresa">A Empresa</a>
   <a href="#contato">Contato</a>
   <button class="btn btn--line" id="btn-present-3" type="button">Modo apresentação</button>
 </div>
+
+<!-- ░░ WHATSAPP FLUTUANTE ░░ -->
+<a class="wa-float" href="https://wa.me/5511952340007?text=Ol%C3%A1!%20Vim%20pelo%20cat%C3%A1logo%20Burg%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.9 4.5 4 .6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg>
+</a>
 
 <!-- ░░ PRODUCT MODAL / LIGHTBOX ░░ -->
 <div class="modal" id="modal" hidden aria-modal="true" role="dialog" aria-label="Detalhes do produto">

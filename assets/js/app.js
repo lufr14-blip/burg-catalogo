@@ -337,3 +337,39 @@
   observeReveals();
   injectProductSchema();
 })();
+
+/* ░░ CALCULADORA DE RENDIMENTO ░░ */
+(function () {
+  const $ = id => document.getElementById(id);
+  const bruto = $("calc-bruto"), perda = $("calc-perda"), porc = $("calc-porc"), vol = $("calc-vol");
+  if (!bruto) return;
+  const brl = n => (isFinite(n) ? n : 0).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+  function run() {
+    const p = Math.min(34.9, +perda.value) / 100;
+    const real = (+bruto.value) / (1 - p);
+    const eco = real - (+porc.value);
+    const mes = eco * (+vol.value);
+    $("calc-perda-val").textContent = perda.value + "%";
+    $("calc-real").textContent = brl(real);
+    $("calc-porcout").textContent = brl(+porc.value);
+    $("calc-kg").textContent = brl(eco);
+    $("calc-mes").textContent = brl(mes);
+    $("calc-msg").textContent = eco >= 0
+      ? "No porcionado você não paga aparas — e ainda elimina a mão de obra da limpeza."
+      : "Mesmo com diferença no kg, você ganha em mão de obra, zero retrabalho e rendimento previsível. Vamos calcular o custo total juntos.";
+    const texto = `Olá! Simulei a calculadora: peça a ${brl(+bruto.value)}/kg, perda ${perda.value}%, porcionado a ${brl(+porc.value)}/kg, volume ${vol.value}kg/mês. Economia estimada de ${brl(mes)}/mês. Quero entender melhor.`;
+    $("calc-cta").href = "https://wa.me/5511952340007?text=" + encodeURIComponent(texto);
+  }
+  [bruto, perda, porc, vol].forEach(el => el.addEventListener("input", run));
+  run();
+})();
+
+/* ░░ Atalho de filtro a partir da seção "Para quem" ░░ */
+(function () {
+  document.addEventListener("click", function (e) {
+    const link = e.target.closest("[data-filter]");
+    if (!link) return;
+    const btn = document.querySelector('#filters button[data-cat="' + link.getAttribute("data-filter") + '"]');
+    if (btn) btn.click();
+  });
+})();
