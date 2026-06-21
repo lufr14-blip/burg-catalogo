@@ -6,7 +6,7 @@
    ============================================================ */
 
 const HEROES = {
-  hero:    "881116-picanha-peca-burg-1.jpg",      // picanha em peça, tábua
+  hero:    "881177-picanha-burg-220g-2.jpg",      // filés de picanha 220g na tábua
   company: "890015-picanha-fatiada-tuche-2.jpg",  // picanha na grelha
   cta:     "881180-ancho-220g-2.jpg"              // ancho na churrasqueira
 };
