@@ -345,7 +345,7 @@
   if (!bruto) return;
   const brl = n => (isFinite(n) ? n : 0).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
   function run() {
-    const p = Math.min(34.9, +perda.value) / 100;
+    const p = Math.min(60, +perda.value) / 100;
     const real = (+bruto.value) / (1 - p);
     const eco = real - (+porc.value);
     const mes = eco * (+vol.value);
