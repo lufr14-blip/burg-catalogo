@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lufr14-blip.github.io/burg-catalogo/sitemap.xml
