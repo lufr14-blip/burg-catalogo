@@ -12,16 +12,16 @@ const HEROES = {
 };
 
 const DIFERENCIAIS = [
-  { icon: "spark",  title: "Qualidade & Tecnologia",
-    text: "Tecnologia de processo e seleção criteriosa da matéria-prima para garantir <strong>maciez sempre</strong>, com os melhores insumos." },
-  { icon: "grid",   title: "Padronização dos cortes",
-    text: "Cortes uniformes, no peso certo, que <strong>dispensam mão de obra qualificada</strong> na cozinha do restaurante." },
-  { icon: "leaf",   title: "Eficiência · Zero perdas",
-    text: "<strong>Sem perdas</strong> no fatiamento e na limpeza de peças dentro da sua operação. O que chega, vira prato." },
-  { icon: "chart",  title: "Previsibilidade & rentabilidade",
-    text: "Número de porções previsível e <strong>CMV sob controle</strong> — você sabe exatamente quanto rende cada caixa." },
-  { icon: "sliders",title: "Personalização",
-    text: "Gramaturas, cortes, temperos e injeção <strong>sob medida</strong> — e novos cortes para ampliar o seu cardápio." }
+  { icon: "spark",  title: "Macia no primeiro corte, macia no último.",
+    text: "Seleção criteriosa da matéria-prima e processo controlado entregam <strong>maciez uniforme na peça inteira</strong> — a faca corta igual no primeiro prato do almoço e no último da noite." },
+  { icon: "grid",   title: "Toda peça igual à foto. Toda vez.",
+    text: "Cortes porcionados na gramatura exata. O prato sai idêntico em qualquer turno e com qualquer cozinheiro — <strong>o padrão não depende mais do braço de quem está na chapa</strong>." },
+  { icon: "leaf",   title: "Você paga carne. Não paga osso, nem aparas.",
+    text: "Produto limpo, aparado e pronto para a chapa. Sem desossa, sem limpeza na bancada: <strong>o que entra no estoque vira porção vendável</strong>." },
+  { icon: "chart",  title: "CMV que você fecha antes de abrir a casa.",
+    text: "Gramatura fixa e rendimento previsível travam o custo por prato. <strong>Você precifica com certeza</strong> e para de descobrir o CMV só no fim do mês." },
+  { icon: "sliders",title: "Sua gramatura. Seu corte. Seu tempero.",
+    text: "A carne chega no padrão do seu cardápio, não no nosso catálogo. <strong>Gramatura, corte e marinada sob medida</strong>, prontos para entrar direto na produção." }
 ];
 
 const CATEGORIES = [
@@ -61,7 +61,7 @@ const PRODUCTS = [
     tags:["Corte nobre","Suculência","Padronizado"] },
   { code:"881177", name:"Picanha em Bifes 220g", cat:"Bovinos", cut:"Picanha", weight:"220 g", prep:"In natura", brand:"Burg",
     slug:"881177-picanha-burg-220g", cover:1,
-    desc:"Bife de picanha alto de 220 g, a porção generosa do steakhouse. Suculência e padrão em cada unidade.",
+    desc:"Bife de picanha alto de 220 g, gordura aparada no ponto e peso cravado unidade a unidade. Cada bife sai com a mesma cara no prato e o mesmo custo na ficha técnica — porção fechada, margem fechada, zero retrabalho na praça.",
     tags:["Porção generosa","Steakhouse","Padronizado"] },
   { code:"881104", name:"Picanha em Bifes 100g", cat:"Bovinos", cut:"Picanha", weight:"100 g", prep:"In natura", brand:"Burg",
     slug:"881104-picanha-100g", cover:2,
@@ -157,7 +157,7 @@ const PRODUCTS = [
     tags:["Marinado","Ótimo custo","Rentabilidade"] },
   { code:"881184", name:"Top Side Steak 150g", cat:"Bovinos", cut:"Top Side", weight:"150 g", prep:"In natura", brand:"Burg",
     slug:"881184-top-side-steak-150g", cover:1,
-    desc:"Steak de top side de 150 g, alternativa nobre e acessível ao contra filé. Maciez surpreendente na grelha.",
+    desc:"Steak de top side de 150 g, alternativa nobre e acessível ao contra filé, com maciez surpreendente na grelha. Já chega porcionado e pronto para a chapa — menos faca na cozinha e tempo de preparo que cabe no horário de pico.",
     tags:["Custo-benefício","Maciez garantida","Padronizado"] },
 
   /* ---------- TIRAS ---------- */
@@ -173,7 +173,7 @@ const PRODUCTS = [
   /* ---------- CARNE MOÍDA ---------- */
   { code:"881102", name:"Carne Moída 5kg", cat:"Bovinos", cut:"Carne Moída", weight:"5 kg", prep:"In natura", brand:"Burg",
     slug:"881102-carne-moida-burg-5kg", cover:2,
-    desc:"Carne moída bovina em embalagem de 5 kg para alto volume. Moagem uniforme para hambúrgueres, molhos e recheios.",
+    desc:"Carne moída bovina de moagem padronizada em embalagem de 5 kg, pronta para hambúrguer, recheio ou molho em alto volume. Rendimento previsível a cada caixa: você dosa por porção, não por estimativa, e o CMV para de variar de uma compra para a outra.",
     tags:["Alto volume","Moagem uniforme","Rendimento"] },
   { code:"881103", name:"Carne Moída Extra Limpa 1,5kg", cat:"Bovinos", cut:"Carne Moída", weight:"1,5 kg", prep:"In natura", brand:"Burg",
     slug:"881103-carne-moida-extra-limpa-burg-1-5kg", cover:1,
