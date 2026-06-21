@@ -388,7 +388,7 @@ body::before{
 .hub-card{display:block;background:linear-gradient(160deg,var(--surface),var(--bg-2));border:1px solid var(--line);border-radius:var(--r-lg);padding:1.8rem;transition:.4s var(--ease)}
 .hub-card:hover{transform:translateY(-5px);border-color:var(--line-2);box-shadow:0 22px 46px -24px rgba(0,0,0,.8)}
 .hub-card .k{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
-.hub-card h2{font-family:var(--serif);font-weight:600;font-size:1.32rem;margin:.6rem 0;line-height:1.2}
+.hub-card h2,.hub-card h3{font-family:var(--serif);font-weight:600;font-size:1.32rem;margin:.6rem 0;line-height:1.2}
 .hub-card p{color:var(--muted);font-size:.95rem}
 .hub-card .more{color:var(--gold);font-size:.9rem;font-weight:600;margin-top:1rem;display:inline-block}
 
@@ -448,3 +448,8 @@ body::before{
   .audience__grid{grid-template-columns:1fr}
   .trustbar__items{grid-template-columns:repeat(2,1fr)}
 }
+
+/* ============ GUIAS (na home) ============ */
+.guides{padding:clamp(60px,9vw,110px) 0;border-top:1px solid var(--line)}
+.guides .hub-grid{margin-top:2.6rem;padding-bottom:0}
+.guides .midcta{margin-top:1.8rem}
